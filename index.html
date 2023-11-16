@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class='root-lists'>
+		<div class="lists">
+			<div class="lists-btn" id="btn-lists"></div>
+			<ul id='lists-items' class='lists-items'>
+				<li>
+					<input v-on:click='handler' id='item-1' type='checkbox'>
+					Item 1
+				</li>
+				<li>
+					<input v-on:click='handler' id='item-2' type='checkbox'>
+					Item 2
+				</li>
+				<li>
+					<input v-on:click='handler' id='item-3' type='checkbox'>
+					Item 3
+				</li>
+				<li>
+					<input v-on:click='handler' id='item-4' type='checkbox'>
+					Item 4
+				</li>
+			</ul>
+			<ul class='lists-items-color'>
+				<li >
+					<div></div>
+					<input disabled id='color-number-1' v-on:change='createLists()' value='10' type="number">
+				</li>
+				<li >
+					<div></div>
+					<input disabled id='color-number-2' v-on:change='createLists()' value='10' type="number">
+				</li>
+				<li >
+					<div></div>
+					<input disabled id='color-number-3' v-on:change='createLists()' value='10' type="number">
+				</li>
+				<li >
+					<div></div>
+					<input disabled id='color-number-4' v-on:change='createLists()' value='10' type="number">
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='root-lists-color'>
+		<div id='color-lists' class="lists-color">
+			<p >list 1</p>
+			<ul id="color-1" class="color">
+			  <li v-for="item in items" :key="item.message">
+			    {{ item.value }}
+			  </li>
+			</ul>
+			<ul id="color-2" class="color">
+			  <li v-for="item in items" :key="item.message">
+			    {{ item.value }}
+			  </li>
+			</ul>
+			<ul id="color-3" class="color">
+			  <li v-for="item in items" :key="item.message">
+			    {{ item.value }}
+			  </li>
+			</ul>
+			<ul id="color-4" class="color">
+			  <li v-for="item in items" :key="item.message">
+			    {{ item.value }}
+			  </li>
+			</ul>
+		</div>
+	</div>
+
+</body>
+<script type="text/javascript" src='index.js'></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script type="text/javascript" src='script-vue.js'></script>
+</html>
